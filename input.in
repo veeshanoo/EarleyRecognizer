@@ -1,15 +1,15 @@
-a b
-S X
-S
+1 2 +
+term number
+term
 _
-5
-S -> a X b X
-S -> b X a X
-X -> a X b X
-X -> b X a X
-X -> _
-ab
-abab
-baa
-bbbb
-abababab
+4
+term -> number + term
+term -> number
+number -> 1
+number -> 2
+1
+2
+1+2
+1+
+1+2+1+2
+2+1
