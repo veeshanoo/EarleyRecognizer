@@ -17,6 +17,8 @@ struct Grammar {
     std::string start; // start symbol
     std::string lambda; // usually is _
 
+    Grammar() = default;
+
     Grammar(std::set<std::string> terminals, std::set<std::string> nonterminals, std::set<Production> productions,
             std::string start, std::string lambda) : terminals(std::move(terminals)),
                                                      nonterminals(std::move(nonterminals)),
@@ -24,6 +26,8 @@ struct Grammar {
                                                      start(std::move(start)), lambda(std::move(lambda)) {
         genNullables();
     }
+
+    void read(std::istream &in);
 
     bool isTerminal(const std::string &s);
 
